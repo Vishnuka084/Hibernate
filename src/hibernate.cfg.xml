@@ -9,7 +9,7 @@
     <!-- define which database that you gonna use    -->
     <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
     <!-- will come a new database if not exits or use already having database   -->
-    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernate_module</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernate_module?createDatabaseIfNotExist=true</property>
     <!-- your databases root     -->
     <property name="hibernate.connection.username">root</property>
     <!-- your databases password     -->

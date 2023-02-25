@@ -5,18 +5,17 @@ import org.hibernate.Transaction;
 
 public class AppInitializer {
     public static void main(String[] args) {
-        Customer c1 = new Customer();
-
-        c1.setId("C001");
-        c1.setName("Sunimal");
-        c1.setAddress("Galle");
-        c1.setSalary(45451);
-
+        Customer c2 = new Customer();
+        c2.setId("C002");
+        c2.setName("sumudu");
+        c2.setAddress("jaffna");
+        c2.setSalary(50000);
 
         Session session = FactoryConfiguration.getInstance().getSession();
-
         Transaction transaction = session.beginTransaction();
-        session.save(c1);
+
+        //for update
+        session.update(c2);
 
         transaction.commit();
 
