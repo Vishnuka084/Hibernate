@@ -6,6 +6,7 @@ import org.hibernate.Transaction;
 public class AppInitializer {
     public static void main(String[] args) {
         Customer c2 = new Customer();
+        Customer c3 = new Customer();
 /*        c2.setId("C002");
         c2.setName("sumudu");
         c2.setAddress("jaffna");
@@ -14,9 +15,11 @@ public class AppInitializer {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
 
-        //for getting one customer
-        Customer c1 = session.get(Customer.class,"C001");
-        System.out.println(c1.getAddress());
+        //for deleting customer
+        Customer c1 = new Customer();
+        c1.setId("C001");
+
+        session.delete(c1);
 
 
         transaction.commit();
